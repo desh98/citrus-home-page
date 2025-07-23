@@ -3,9 +3,9 @@ import Button from './Button';
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-purple-700 to-purple-900 text-white px-8 py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white px-8 py-20 pt-40 relative overflow-hidden">
       <div className="max-w-5xl mx-auto text-center z-10 relative">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-4">
           Cloud Based, All-in-One<br />Hotel Management System
         </h1>
         <p className="text-lg text-white/80 mb-8">

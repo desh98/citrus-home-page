@@ -4,14 +4,15 @@ import Button from "./Button";
 
 export default function Navbar() {
   return (
-    <nav className="bg-purple-800 flex justify-center items-center flex-col md:flex-row fixed top-0 w-full z-10 transition-all duration-300" id="navbar">
+    <nav className="bg-[var(--primary)] flex justify-center items-center flex-col md:flex-row fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
       <div className="flex items-center justify-between w-full md:w-[80%] p-4 ">      
         <div className="flex items-center mb-4 md:mb-0 p-2">
         
         {/* Logo */}
       
         <div className="flex items-center gap-2 text-white font-bold text-xl">
-          <Image src="/images/logo.png" alt="Citrus Logo" width={200} height={200} />
+          <Image src="/images/logo.png" alt="Citrus Logo" width={150} height={150} />
+        <h5 className="text-[var(--primary)]">ds</h5>
         </div>
       
       </div>
@@ -38,16 +39,16 @@ export default function Navbar() {
 }
 
 // Add this script at the end of your file or in a separate script file
-document.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  if (window.scrollY > 0) {
-    navbar.style.opacity = '0.7';
-    navbar.style.height = '60px'; // Reduced height when scrolling
-    navbar.style.padding = '4px';
-  } else {
-    navbar.style.opacity = '1';
-    navbar.style.height = 'auto'; // Default height
-    navbar.style.padding = '16px'; // Default padding
-  }
-});
+// document.addEventListener('scroll', () => {
+//   const navbar = document.getElementById('navbar');
+//   if (!navbar) return;
+//   if (window.scrollY > 0) {
+//     navbar.style.opacity = '0.7';
+//     navbar.style.height = '60px'; // Reduced height when scrolling
+//     navbar.style.padding = '4px';
+//   } else {
+//     navbar.style.opacity = '1';
+//     navbar.style.height = 'auto'; // Default height
+//     navbar.style.padding = '16px'; // Default padding
+//   }
+// });
