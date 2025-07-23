@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="bg-[var(--background)] text-[var(--dark)] px-8 py-20 pt-40 relative overflow-hidden">
       <div className="max-w-5xl mx-auto text-center z-10 relative">
         <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-4">
-          Cloud Based, <span className='text-orange-400'>All-in-One</span><br />Hotel Management System
+          Cloud Based, <span className='text-orange-500'>All-in-One</span><br />Hotel Management System
         </h1>
         <p className="text-lg text-[var(--foreground)]/80 mb-8">
           Meeting all of your Hotel business needs.
