@@ -34,31 +34,85 @@ const ProductSection = () => {
         const windowHeight = window.innerHeight;
         if (cardTop < windowHeight - 100 && !card.classList.contains('animate-fade-in')) {
           card.classList.add('animate-fade-in');
-          setTimeout(() => card.classList.add(`animate-slide-up-${index + 1}`), 100);
         }
       });
     };
     window.addEventListener('scroll', handleScroll);
-    // Trigger animation on load if already in view
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <section className="flex justify-around p-6 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen items-center">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-20 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen items-start">
       {products.map((product, index) => (
         <div
           key={index}
-          className="product-card bg-white p-6 rounded-xl w-1/5 text-center shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          className="product-card w-full h-80 perspective-1000 animate-fade-in"
         >
-          <h3 className="text-2xl font-bold text-gray-800 mb-3">{product.title}</h3>
-          <p className="text-gray-600 mb-4 text-sm leading-relaxed">{product.description}</p>
-          <a
-            href={product.link}
-            className="inline-block px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-200"
+          <div
+            className="relative w-full h-full transform-style-preserve-3d transition-all duration-500 hover:flip-y hover:scale-105 hover:shadow-2xl"
+            style={{ transformStyle: 'preserve-3d' }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 128, 128, 0.4)';
+              e.currentTarget.style.filter = 'brightness(1.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.2)';
+              e.currentTarget.style.filter = 'brightness(1)';
+            }}
           >
-            DISCOVER MORE
-          </a>
+            {/* Front Side */}
+            <div
+              className="absolute w-full h-full  bg-white rounded-xl shadow-md p-4 flex flex-col justify-center items-center text-center"
+              style={{
+                backfaceVisibility: 'hidden',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.5s ease',
+              }}
+            >
+              <div
+                className="w-16 h-16 mb-4"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(0, 128, 128, 0.1) 0%, rgba(0, 191, 255, 0.05) 100%)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)',
+                  transition: 'transform 0.4s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              >
+                <span style={{ fontSize: '24px', color: '#008080' }}>🏠</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">{product.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
+            </div>
+            {/* Back Side */}
+            <div
+              className="absolute w-full h-full bg-teal-600 rounded-xl p-4 flex flex-col justify-center items-center text-center text-white"
+              style={{
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)',
+                boxShadow: '0 6px 15px rgba(0, 0, 0, 0.2)',
+                transition: 'transform 0.5s ease',
+              }}
+            >
+              <h3 className="text-xl font-bold mb-2">Details</h3>
+              <p className="text-sm leading-relaxed">Explore {product.title} for advanced management solutions.</p>
+              <a
+                href={product.link}
+                className="mt-4 inline-block px-4 py-2 bg-white text-teal-600 rounded-full hover:bg-gray-200 transition-colors duration-300"
+                style={{ fontWeight: '700' }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+              >
+                LEARN MORE
+              </a>
+            </div>
+          </div>
         </div>
       ))}
     </section>
