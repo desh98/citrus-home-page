@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 interface FAQ {
   question: string;
@@ -30,7 +31,31 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-purple-50 to-indigo-100 py-12 px-4 md:px-8 lg:px-12">
+    <section className="bg-gradient-to-b from-purple-50 to-indigo-100 py-12 px-4 md:px-8 lg:px-40">
+      {/* Support Banner */}
+      <div
+        className="bg-purple-800 text-white h-32 p-4 md:p-6 rounded-xl mb-8 flex flex-col md:flex-row justify-between items-center shadow-lg"
+        style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 20 20\'%3E%3Cpath d=\'M10 0l5 5-5 5-5-5 5-5z\' fill=\'%23ffffff26\'/%3E%3C/svg%3E")',
+          backgroundSize: '20px 20px',
+        }}
+      >
+        <div className="flex items-center space-x-4 mb-4 md:mb-0 flex-col">
+          <h1 className="text-sm md:text-4xl"> 24x7</h1>
+          <h3 className="text-xl md:text-2xl ">Need support? contact our team</h3>
+        </div>
+        <div className="flex items-center space-x-4 ">
+          <a
+            href="tel:+94772284005"
+            className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors duration-200 flex items-center"
+          >
+            <span className="mr-2"></span> +94 77 228 4005
+          </a>
+        
+        </div>
+      </div>
+
+      {/* FAQ Content */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-indigo-700 mb-6 flex items-center">
           <span className="mr-3 text-3xl md:text-4xl">❓</span> FAQ - Frequently Asked Questions
