@@ -7,21 +7,25 @@ const products = [
     title: 'Citrus pms',
     description: 'Rates, Reservations, FrontOffice, Check-in, Check-out, Guest Billing, Housekeeping, Night-audit, etc.',
     link: '/citrus-pms',
+    image: '/images/products/pms_logo_black.png',
   },
   {
     title: 'Citrus FINANCE',
     description: 'Purchasing, Stocks, Suppliers, Customers, Finance, Accounting, Banking, Recipe, Food Costing, Fixed Assets, etc.',
     link: '/citrus-finance',
+    image: '/images/products/finance_logo_black.png',
   },
   {
     title: 'Citrus POS',
     description: 'Dine-in, Delivery, Take-away, Room Service, Ordering, Billing, Cashiering, KOT, BOT, Stocks, etc.',
     link: '/citrus-pos',
+    image: '/images/products/pos_logo_black.png',
   },
   {
     title: 'ROOMSNET',
     description: 'RoomsNET is the most effective way to manage your Online Travel Agents.',
     link: '/roomsnet',
+    image: '/images/products/logo_roomsnet.png',
   },
 ];
 
@@ -63,7 +67,7 @@ const ProductSection = () => {
           >
             {/* Front Side */}
             <div
-              className="absolute w-full h-full  bg-white rounded-xl shadow-md p-4 flex flex-col justify-center items-center text-center"
+              className="absolute w-full h-full bg-white rounded-xl shadow-md p-4 flex flex-col justify-center items-center text-center"
               style={{
                 backfaceVisibility: 'hidden',
                 border: '1px solid rgba(0, 0, 0, 0.1)',
@@ -71,7 +75,9 @@ const ProductSection = () => {
                 transition: 'transform 0.5s ease',
               }}
             >
-              <div
+              <img
+                src={product.image}
+                alt={product.title}
                 className="w-16 h-16 mb-4"
                 style={{
                   background: 'linear-gradient(135deg, rgba(0, 128, 128, 0.1) 0%, rgba(0, 191, 255, 0.05) 100%)',
@@ -84,9 +90,7 @@ const ProductSection = () => {
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-              >
-                <span style={{ fontSize: '24px', color: '#008080' }}>🏠</span>
-              </div>
+              />
               <h3 className="text-xl font-bold mb-2">{product.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
             </div>
