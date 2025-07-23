@@ -1,3 +1,5 @@
+import AchievementsSection from '@/components/Achievement';
+import FAQSection from '@/components/Faq';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
@@ -12,6 +14,8 @@ export default function Home() {
       <Hero />
       <ProductSection />
       <ServicesSection />
+      <AchievementsSection />
+      <FAQSection />
       <Footer />
     </main>
   );

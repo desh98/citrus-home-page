@@ -115,3 +115,9 @@ body {
 @keyframes slideUp {
   to { transform: translateY(0); }
 }
+
+
+
+.counter.counting {
+  animation: none;
+}
