@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Button from "./Button";
 
 export default function Navbar() {
   return (
@@ -15,7 +16,7 @@ export default function Navbar() {
       
       </div>
       <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 w-full md:w-auto p-2">
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-white">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-white">
           <a href="#" className="hover:text-yellow-300">Home</a>
           <div className="relative group">
             <a href="#" className="hover:text-yellow-300">Our Products</a>
@@ -29,9 +30,7 @@ export default function Navbar() {
           <a href="#" className="hover:text-yellow-300">Testimonial</a>
           <a href="#" className="hover:text-yellow-300">Contact</a>
         </div>
-        <button className="bg-orange-500 text-white text-sm h-8 w-full md:w-auto px-4 py-1 rounded-full font-semibold mt-2 md:mt-0">
-          TRY IT FREE
-        </button>
+        <Button label="TRY IT FREE" href="#contact" />
       </div>
       </div>
     </nav>
