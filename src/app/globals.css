@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #F5F5F5;        /* Soft Gray */
+  --foreground: #171717;        /* Deep text */
+  --white: #FFFFFF;             /* White */
+
+  --primary: #5D2EFF;           /* Main Purple */
+  --primary-dark: #3A0CA3;      /* Darker Purple (gradient end) */
+
+  --orange: #FF9340;            /* CTA Buttons */
+  --yellow: #FFC145;            /* Accent / Icons */
+
+  --blue: #00C2FF;              /* Light Blue (chat/profit chart) */
+  --green: #00D26A;             /* Status Active / Profit */
+  --gray: #B1B5C3;              /* Mid-gray text */
+  --menutextgray: #777E90;      /* Navigation text */
+  --border: #E6E8EC;            /* UI dividers */
+
+  --red: #F90430;
+
+
+  --font-sans: 'Poppins', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #3772FF;
+    --menutext: #777E90;
+    --font-sans: 'Poppins', sans-serif;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.card {
+  width: 170px;
+  height: 48px;
+}
+
+.selectedmenu {
+  color: var(--primary);
+  font-weight: 500; 
+  border-width: 2px;
+  border-color: var(--primary);
+  border-radius: 0.5rem; 
+}
+
+.selectedsubmenu {
+  color: var(--primary);
+  font-weight: 500; 
+  border-color: var(--primary);
+}
