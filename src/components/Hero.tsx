@@ -3,12 +3,12 @@ import Button from './Button';
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white px-8 py-20 pt-40 relative overflow-hidden">
+    <section className="bg-[var(--background)] text-[var(--dark)] px-8 py-20 pt-40 relative overflow-hidden">
       <div className="max-w-5xl mx-auto text-center z-10 relative">
         <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-4">
-          Cloud Based, All-in-One<br />Hotel Management System
+          Cloud Based, <span className='text-orange-400'>All-in-One</span><br />Hotel Management System
         </h1>
-        <p className="text-lg text-white/80 mb-8">
+        <p className="text-lg text-[var(--foreground)]/80 mb-8">
           Meeting all of your Hotel business needs.
         </p>
         <Button label="REQUEST A DEMO" />
@@ -16,13 +16,15 @@ export default function Hero() {
 
       {/* Hero UI image */}
       <div className="mt-20 relative z-10 flex justify-center">
-        <Image
-          src="/images/hero-ui.png"
-          alt="Hotel dashboard UI"
-          width={900}
-          height={500}
-          className="rounded-xl shadow-xl"
-        />
+        <div className="p-2 bg-purple-400">
+            <Image
+                src="/images/hero/banner_new_1.jpg"
+                alt="Hotel dashboard UI"
+                width={900}
+                height={500}
+                className="rounded-xl shadow-xl"
+            />
+        </div>
       </div>
 
       {/* Abstract shapes (optional, decorative) */}

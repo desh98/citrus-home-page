@@ -2,23 +2,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F5F5;        /* Soft Gray */
-  --foreground: #171717;        /* Deep text */
-  --white: #FFFFFF;             /* White */
+  --background: #F5F5F5;        
+  --foreground: #171717;        
+  --white: #FFFFFF;             
 
-  --primary: #41169C;           /* Main Purple */
-  --primary-dark: #3A0CA3;      /* Darker Purple (gradient end) */
-
-  --orange: #FF8854;            /* CTA Buttons */
-
-
-  --blue: #00C2FF;              /* Light Blue (chat/profit chart) */
-  --green: #00D26A;             /* Status Active / Profit */
-  --gray: #B1B5C3;              /* Mid-gray text */
-  --menutextgray: #777E90;      /* Navigation text */
-  --border: #E6E8EC;            /* UI dividers */
-
-  --red: #F90430;
+  --primary-light: #C8B1D2;
+  --primary: #74489A;
+  --secondary: #EAB926;
+  --dark: #3B2B34;
+  --green: #6F7645;
 
 
   --font-sans: 'Poppins', sans-serif;
