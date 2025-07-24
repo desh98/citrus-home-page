@@ -50,8 +50,8 @@ export default function Navbar() {
             <a href="#" className="hover:text-yellow-300">Home</a>
             <div className="relative group">
               <a href="#" className="hover:text-yellow-300">Our Products</a>
-              <div className="absolute hidden group-hover:block bg-white text-black p-2 rounded shadow-md">
-                <a href="#" className="block">Subitem 1</a>
+              <div className="absolute hidden group-hover:block mt-8 space-y-4 bg-purple-200 w-40 flex items-center text-black p-2 rounded shadow-md">
+                <a href="#" className="block mt-2">Subitem 1</a>
                 <a href="#" className="block">Subitem 2</a>
               </div>
             </div>

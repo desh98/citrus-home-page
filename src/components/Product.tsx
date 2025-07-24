@@ -47,7 +47,7 @@ const ProductSection = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-20 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen items-start">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-20 bg-gradient-to-br from-gray-100 to-gray-200 items-start">
       {products.map((product, index) => (
         <div
           key={index}
@@ -78,10 +78,10 @@ const ProductSection = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-16 h-16 mb-4"
+                className="w-60 h-12 mb-4"
                 style={{
                   background: 'linear-gradient(135deg, rgba(0, 128, 128, 0.1) 0%, rgba(0, 191, 255, 0.05) 100%)',
-                  borderRadius: '50%',
+                  // borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -91,7 +91,7 @@ const ProductSection = () => {
                 onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
               />
-              <h3 className="text-xl font-bold mb-2">{product.title}</h3>
+              {/* <h3 className="text-xl font-bold mb-2">{product.title}</h3> */}
               <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
             </div>
             {/* Back Side */}
